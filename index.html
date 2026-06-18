@@ -4,18 +4,67 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Google+Sans:ital,opsz,wght@0,17..18,400..700;1,17..18,400..700&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap" rel="stylesheet">
+
     <link rel="stylesheet" href="style.css">
 
     <title>Document</title>
 </head>
 <body>
 
-    <div class="card">
-        <h1>CONTROLE DE PRODUTOS</h1>
+    <header>
+        <h1>Minha Loja 1.0</h1>
+    </header>
 
-        <button onclick="produto.adicionar()">Adicionar</button>
-        <button onclick="produto.excluir()">Excluir</button>
-    </div>
+    <main>
+        <div class="title">
+            <h2>Produtos</h2>
+            <span>Lista de produtos da minha loja.</span>
+        </div>
+
+        <div class="card">
+                <div class="lineInput">
+                    <label>Produto</label>
+                    <input type="text" id="produto" placeholder="Nome do Produto">
+                </div>
+
+                <div class="lineInput">
+                    <label>Valor</label>
+                    <input type="text" id="valor" placeholder="Valor do Produto">
+                </div>
+
+
+                <button onclick="produto.adicionar()">Adicionar</button>
+                <button onclick="produto.excluir()">Excluir</button>
+        </div>
+
+        <div class="content">
+            <table border="1">
+                <thead>
+                    <th class="center">ID</th>
+                    <th>Nome</th>
+                    <th>Valor</th>
+                    <th class="center">Ações</th>
+                </thead>
+
+                <tbody>
+                    <tr>
+                        <td class="center">1</td>
+                        <td>Mesa da sala de estar</td>
+                        <td>1900</td>
+                        <td class="center">
+                            <img src="img/editar.png" alt="editar">
+                            <img src="img/excluir.png" alt="excluir">
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+
+    </main>
     
 
     <script src="script.js"></script>
