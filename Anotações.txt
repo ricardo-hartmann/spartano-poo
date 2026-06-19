@@ -3,3 +3,6 @@ git pull origin main <- pegar do repositório na pasta local
 table border="1"
 CSS: border-collapse: collapse;
 thead > th | tbody > tr > td
+
+tr = linha (lembra do Row)
+td = Coluna

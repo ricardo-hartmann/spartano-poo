@@ -31,13 +31,13 @@
                 </div>
 
                 <div class="lineInput">
-                    <label>Valor</label>
-                    <input type="text" id="valor" placeholder="Valor do Produto">
+                    <label>Preço</label>
+                    <input type="text" id="preco" placeholder="Preço do Produto">
                 </div>
 
 
-                <button onclick="produto.adicionar()">Adicionar</button>
-                <button onclick="produto.excluir()">Excluir</button>
+                <button onclick="produto.salvar()">Salvar</button>
+                <button onclick="produto.cancelar()">Cancelar</button>
         </div>
 
         <div class="content">
@@ -49,16 +49,8 @@
                     <th class="center">Ações</th>
                 </thead>
 
-                <tbody>
-                    <tr>
-                        <td class="center">1</td>
-                        <td>Mesa da sala de estar</td>
-                        <td>1900</td>
-                        <td class="center">
-                            <img src="img/editar.png" alt="editar">
-                            <img src="img/excluir.png" alt="excluir">
-                        </td>
-                    </tr>
+                <tbody id="tbody">
+
                 </tbody>
             </table>
         </div>
