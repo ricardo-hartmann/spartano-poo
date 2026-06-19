@@ -36,6 +36,8 @@ class Produto {
 
             let imgEdit = document.createElement('img');
             imgEdit.src = 'img/editar.png';
+            imgEdit.setAttribute("onclick", "produto.editar("+ JSON.stringify(this.arrayProdutos[i]) +")");
+            
 
             let imgDelete = document.createElement('img');
             imgDelete.src = 'img/excluir.png';
@@ -44,7 +46,7 @@ class Produto {
             td_acoes.appendChild(imgEdit);
             td_acoes.appendChild(imgDelete);
 
-            console.log(this.arrayProdutos)
+            console.log(this.arrayProdutos);
 
         }
     }
@@ -52,6 +54,10 @@ class Produto {
     adicionar(produto) {
         this.arrayProdutos.push(produto);
         this.id++;
+    }
+
+    editar(dados) {
+        alert(dados.id);
     }
 
     lerDados() {
@@ -89,12 +95,14 @@ class Produto {
     }
 
     deletar(id) {
+        if (confirm('Deseja realmente deletar od produto ' + id + '?')){;
         let tbody = document.getElementById('tbody');
 
         for(let i = 0; i < this.arrayProdutos.length; i++){ 
             if (this.arrayProdutos[i].id == id) {
                 this.arrayProdutos.splice(i, 1);
                 tbody.deleteRow(i);
+            }
             }
         }
     }
